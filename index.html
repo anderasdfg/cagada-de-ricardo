@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTAKONAME</title>
+    <link  rel="icon"   href="images/OtakoIcon.png" type="image/png" />
+    <link rel="stylesheet" href="otakostyle.css">
+    <script src="control.js"></script>
+</head>
+<body>
+    <nav class = "OtakoLogoNav">
+        <img class = "OtakoLogoImage" src="images/OtakoLogo.png">
+    </nav>
+
+    <nav class = "Encabezado">
+        <h1 class = "LetraEncabezado">CONOCE TU OTAKU INTERIOR</h1>
+    </nav>
+    <nav>
+        <span id="SateSateSate"></span>
+        <div class = "OtakuImageContenedor">
+            <img class = "OtakuImageImage" src="images/ColomboDiodas.png" onclick= "Sound('audio/SATE SATE SATE.mp3')" onmouseover="Sound('audio/SATE SATE SATE.mp3')">
+        </div>
+    </nav>
+    <nav name = "EntradaOtako" class = "CamposOtakos">
+        <label for="fname">Nombre</label>
+        <input type="text" id="fname" name="firstname" placeholder="Escribe tu nombre no otako">
+
+        <label for="lname">Apellido</label>
+        <input type="text" id="lname" name="lastname" placeholder="Escribe tu apellido no otako">   
+
+        <input type="submit" value="GENERAR MI OTAKUNAME" onclick="Sound('audio/yametekudasai.wav'), OtakoName()">
+    </nav>
+
+    <div id = "ResultadoOtako" class = "ModalOtako">
+        <div class = "ContenedorModal">
+            <header>OTAKUTRANSFORMACIÓN TERMINADA</header>
+            <div>
+                <p class="OtakoAnuncio">Tu nombre otaku es:</p>
+                <p id = "ConversionOtako" class = "OtakoLetter" class =></p>
+                <p class="OtakoAnuncio">Tu nombre corto es:</p>
+                <p id = "OtakoSan" class = "OtakoLetter"></p>
+            </div>
+            <nav class = "ModalOtakoOpciones">
+                <input  type="button" value="COPIAR" onclick="Sound('audio/oniichan.mp3'), CopyToClippboard()">
+                <input  type="button" value="CERRAR" onclick="Sound('audio/ah.wav'), CloseModal()">
+            </nav>
+           
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class = "textFooter">version alpha 0.0.0.201020</p>
+    </footer>
+
+
+</body>
+</html>
